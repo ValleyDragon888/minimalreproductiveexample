@@ -34,7 +34,7 @@ class Game(context: Context) : ContextListener(context) {
             gl.clearColor(Color.DARK_GRAY)
             gl.clear(ClearBufferMask.COLOR_BUFFER_BIT)
 
-            batch.use(camera.viewProjection) {
+            batch.use() {
                 Fonts.default.draw(it, "Hello LittleKt!", 0f, 0f, align = HAlign.CENTER)
                 shapeRenderer.filledRectangle(-50f, 50f, 100f, 50f, rotation, color = Color.RED.toFloatBits())
             }
